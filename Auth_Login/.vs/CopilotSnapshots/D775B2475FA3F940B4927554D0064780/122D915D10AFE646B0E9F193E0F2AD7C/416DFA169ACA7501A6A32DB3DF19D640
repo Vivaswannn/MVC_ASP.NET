@@ -1,0 +1,36 @@
+﻿using Auth_Login.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+
+namespace Auth_Login.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            // Copy TempData to ViewBag so the view can access the values reliably
+            if (TempData["SuccessMessage"] != null)
+            {
+                ViewBag.SuccessMessage = TempData["SuccessMessage"];
+            }
+
+            if (TempData["UserName"] != null)
+            {
+                ViewBag.UserName = TempData["UserName"];
+            }
+
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}

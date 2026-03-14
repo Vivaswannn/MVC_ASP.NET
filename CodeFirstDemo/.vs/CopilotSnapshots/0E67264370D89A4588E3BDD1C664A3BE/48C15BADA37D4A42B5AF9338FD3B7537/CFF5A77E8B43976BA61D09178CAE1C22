@@ -1,0 +1,104 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using CodeFirstDemo.Context;
+using CodeFirstDemo.EmployeeRepositories;
+using CodeFirstDemo.Models;
+
+namespace CodeFirstDemo.Controllers
+{
+    public class EmployeeController : Controller
+    {
+        //Direct Dependency indjection
+        //private EmployeeContext _employeeContext;
+        //EmployeeController(EmployeeContext employeeContext)
+        //{
+        //    this._employeeContext = employeeContext;
+        //}
+
+        //Repository dependency injection 
+        //public async Task<IActionResult> Index()
+        //{
+        //    return _employeeContext.Employees != null ?
+        //                View(await _employeeContext.Employees.ToListAsync()) :
+        //                Problem("Entity set 'EmployeeContext.Employees'  is null.");
+        //}
+        private IEmployeeRepository _employeeRepository;
+        public EmployeeController(IEmployeeRepository _employeeRepository)
+        {
+            this._employeeRepository = _employeeRepository;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            return View(await _employeeRepository.GetAllEmployees());
+
+        }
+        public async Task<IActionResult> Details(int id)
+        {
+            var employee = await _employeeRepository.GetEmployeeById(id);
+            //if (employee == null)
+            //{
+            //    return NotFound();
+            //}
+            return View(employee);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                await _employeeRepository.AddEmployee(employee);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(employee);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+
+            }
+            var employee = await _employeeRepository.GetEmployeeById(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Employee employee)
+        {
+            if (id != employee.EmpID)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _employeeRepository.UpdateEmployee(employee);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+            return View(employee);
+        }
+    }
+}

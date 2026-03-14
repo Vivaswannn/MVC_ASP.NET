@@ -1,0 +1,25 @@
+﻿using Microsoft.EntityFrameworkCore;
+namespace Auth_Login.Models
+{
+    public class LoginDbcontext
+    {
+        public LoginDbcontext(DbContextOptions<LoginDbcontext> options)
+            :base(options) 
+        {
+        }
+
+
+        public DbSet<UserLogin> UserLogin { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<UserLogin>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.UserName).IsRequired();
+                entity.Property(e => e.passCode).IsRequired();
+            });
+        }
+    }
+}

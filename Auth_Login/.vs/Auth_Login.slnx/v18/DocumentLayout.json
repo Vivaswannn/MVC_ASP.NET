@@ -1,0 +1,242 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MVCDemo\\Auth_Login\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\models\\logindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\models\\logindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\models\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\models\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\authenticateloginrepositories\\authenticatelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\authenticateloginrepositories\\authenticatelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MVCDemo\\Auth_Login\\Auth_Login\\Migrations\\20260312095759_intial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Auth_Login\\Migrations\\20260312095759_intial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|d:\\mvcdemo\\auth_login\\auth_login\\authenticateloginrepositories\\iauthenticatelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEE2343F-FF59-D79B-1F29-A781E7825BF4}|Auth_Login\\Auth_Login.csproj|solutionrelative:auth_login\\authenticateloginrepositories\\iauthenticatelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Auth_Login\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Auth_Login\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T10:30:59.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Auth_Login\\Views\\Login\\Index.cshtml",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Auth_Login\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-12T10:11:00.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Auth_Login\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T10:03:37.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Auth_Login\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Auth_Login\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-12T10:17:59.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\appsettings.json",
+              "RelativeDocumentMoniker": "Auth_Login\\appsettings.json",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\appsettings.json",
+              "RelativeToolTip": "Auth_Login\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-12T09:23:27.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginDbcontext.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Models\\LoginDbcontext.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\Models\\LoginDbcontext.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Models\\LoginDbcontext.cs",
+              "RelativeToolTip": "Auth_Login\\Models\\LoginDbcontext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T09:30:41.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Style.css",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\wwwroot\\css\\Style.css",
+              "RelativeDocumentMoniker": "Auth_Login\\wwwroot\\css\\Style.css",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\wwwroot\\css\\Style.css",
+              "RelativeToolTip": "Auth_Login\\wwwroot\\css\\Style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-12T10:19:43.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserLogin.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Models\\UserLogin.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\Models\\UserLogin.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Models\\UserLogin.cs",
+              "RelativeToolTip": "Auth_Login\\Models\\UserLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T09:25:44.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20260312095759_intial.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Migrations\\20260312095759_intial.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\Migrations\\20260312095759_intial.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Migrations\\20260312095759_intial.cs",
+              "RelativeToolTip": "Auth_Login\\Migrations\\20260312095759_intial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T09:58:00.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthenticateLogin.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\AuthenticateLoginRepositories\\AuthenticateLogin.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\AuthenticateLoginRepositories\\AuthenticateLogin.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\AuthenticateLoginRepositories\\AuthenticateLogin.cs",
+              "RelativeToolTip": "Auth_Login\\AuthenticateLoginRepositories\\AuthenticateLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T09:40:13.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Program.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\Program.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\Program.cs",
+              "RelativeToolTip": "Auth_Login\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T09:46:39.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAuthenticateLogin.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\AuthenticateLoginRepositories\\IAuthenticateLogin.cs",
+              "RelativeDocumentMoniker": "Auth_Login\\AuthenticateLoginRepositories\\IAuthenticateLogin.cs",
+              "ToolTip": "D:\\MVCDemo\\Auth_Login\\Auth_Login\\AuthenticateLoginRepositories\\IAuthenticateLogin.cs",
+              "RelativeToolTip": "Auth_Login\\AuthenticateLoginRepositories\\IAuthenticateLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T09:36:03.873Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

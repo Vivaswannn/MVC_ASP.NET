@@ -1,0 +1,48 @@
+﻿@model StudentManagement.Models.Student
+
+<h2>Edit Student</h2>
+
+@using (Html.BeginForm("Edit", "Student", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.StudentId)
+
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name, "", new { style = "color:red" })
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email, "", new { style = "color:red" })
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age, "", new { style = "color:red" })
+    </div>
+    <br />
+
+    <div>
+        <label>Gender</label><br />
+        @Html.RadioButtonFor(m => m.Gender, "Male") <span>Male</span>
+        @Html.RadioButtonFor(m => m.Gender, "Female") <span>Female</span>
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.DepartmentId, "Department")
+        @Html.DropDownListFor(m => m.DepartmentId,
+            new SelectList(ViewBag.Departments, "DepartmentId", "DepartmentName"))
+    </div>
+    <br />
+
+    <input type="submit" value="Update Student" />
+}
+
+<br />
+@Html.ActionLink("← Back to List", "Index")

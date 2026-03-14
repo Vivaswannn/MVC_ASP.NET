@@ -1,0 +1,38 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Auth_Login.AuthenticateLoginRepositories;
+
+namespace Auth_Login.Controllers
+{
+    public class LoginController : Controller
+    {
+        private readonly IAuthenticateLogin _loginUser;
+
+        public LoginController(IAuthenticateLogin loginUser)
+        {
+            _loginUser = loginUser;
+        }
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(string username, string password)
+        {
+            var issuccess = _loginUser.AuthenticateUser(username, password);
+
+            if (issuccess != null)
+            {
+                ViewBag.SuccessMessage = "Login successful!";
+
+                TempData["UserName"] = "Vivaswan";
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Invalid username or password.";
+                return View();
+            }
+        }
+    }
+}

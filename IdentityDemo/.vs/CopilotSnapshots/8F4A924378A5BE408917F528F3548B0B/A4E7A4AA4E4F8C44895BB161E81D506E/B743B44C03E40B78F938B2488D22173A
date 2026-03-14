@@ -1,0 +1,14 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace IdentityDemo.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+
+        // Add DbSet<T> properties here as needed
+    }
+}

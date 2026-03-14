@@ -1,0 +1,9 @@
+﻿namespace IdentityDemo.Models
+{
+    public class ApplicationUser : Id
+    {
+        public string FullName { get; set; }
+        public string Email { get; set; }
+
+    }
+}

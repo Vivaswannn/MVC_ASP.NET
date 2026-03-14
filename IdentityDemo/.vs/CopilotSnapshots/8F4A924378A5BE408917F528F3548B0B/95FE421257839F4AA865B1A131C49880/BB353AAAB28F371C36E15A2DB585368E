@@ -1,0 +1,7 @@
+﻿namespace IdentityDemo.Data
+{
+    public class ApplicationDbContext
+    {
+
+    }
+}

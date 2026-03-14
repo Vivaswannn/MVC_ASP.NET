@@ -1,0 +1,63 @@
+﻿using IdentityDemo.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+
+namespace IdentityDemo.Controllers
+{
+    public class AccountController : Controller
+    {
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
+
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        {
+            this.userManager = userManager;
+            this.signInManager = signInManager;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            ApplicationUser user = new ApplicationUser
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                FullName = model.FullNamw
+            };
+            var result = await userManager.CreateAsync(user, model.Password);
+            if (result.Succeeded)
+            {
+                await signInManager.SignInAsync(user, isPersistent: false);
+                return RedirectToAction("Login", "Account");
+            }
+            return View();
+        }
+
+        [HttpGet]
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+         [HttpPost]
+         public async Task<IActionResult> Login(LoginViewModel model)
+        {
+                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                return View();
+        }
+    }
+}

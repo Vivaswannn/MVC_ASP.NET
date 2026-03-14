@@ -1,0 +1,154 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using StudentManagement.Data;
+using StudentManagement.Models;
+
+namespace StudentManagement.Controllers
+{
+    public class StudentController : Controller
+    {
+        private readonly StudentDbContext _context;
+
+        // DI — Visual Studio automatically passes DbContext here
+        public StudentController(StudentDbContext context)
+        {
+            _context = context;
+        }
+
+        // ---- INDEX ----
+        // IActionResult type | LINQ Include = JOIN with Department table
+        public IActionResult Index()
+        {
+            ViewBag.Title = "Student List";
+            ViewData["Message"] = "Welcome to Student Portal";
+
+            var students = _context.Students
+                .Include(s => s.Department)
+                .ToList();
+
+            return View(students);
+        }
+
+        // ---- CREATE GET ----
+        // Shows the empty form
+        public IActionResult Create()
+        {
+            ViewBag.Departments = _context.Departments.ToList();
+            return View();
+        }
+
+        // ---- CREATE POST ----
+        // Receives form data, validates, saves to DB
+        [HttpPost]
+        public IActionResult Create(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Students.Add(student);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Departments = _context.Departments.ToList();
+            return View(student);
+        }
+
+        // ---- DETAILS ----
+        // ActionResult<T> strongly typed
+        public IActionResult Details(int id)
+        {
+            var student = _context.Students
+                .Include(s => s.Department)
+                .FirstOrDefault(s => s.StudentId == id);
+
+            if (student == null)
+                return NotFound(); // 404 Status Code Result
+
+            return View(student);
+        }
+
+        // ---- EDIT GET ----
+        public IActionResult Edit(int id)
+        {
+            var student = _context.Students
+                .Where(s => s.StudentId == id)  // LINQ Where
+                .FirstOrDefault();
+
+            if (student == null) return NotFound();
+
+            ViewBag.Departments = _context.Departments.ToList();
+            return View(student);
+        }
+
+        // ---- EDIT POST ----
+        [HttpPost]
+        public IActionResult Edit(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Students.Update(student);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Departments = _context.Departments.ToList();
+            return View(student);
+        }
+
+        // ---- DELETE GET ----
+        // Shows confirmation page
+        public IActionResult Delete(int id)
+        {
+            var student = _context.Students
+                .FirstOrDefault(s => s.StudentId == id);
+
+            if (student == null) return NotFound();
+
+            return View(student);
+        }
+
+        // ---- DELETE POST ----
+        [HttpPost]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var student = _context.Students.Find(id);
+            if (student == null) return NotFound();
+
+            _context.Students.Remove(student);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // ---- SEARCH ----
+        // LINQ Where + Contains
+        public IActionResult Search(string name)
+        {
+            var students = _context.Students
+                .Include(s => s.Department)
+                .Where(s => s.Name.Contains(name))
+                .ToList();
+
+            ViewBag.Title = $"Search Results for: {name}";
+            return View("Index", students); // reuses Index view
+        }
+
+        // ---- JSON RESULT ----
+        public JsonResult JsonData()
+        {
+            var students = _context.Students.ToList();
+            return Json(students);
+        }
+
+        // ---- CONTENT RESULT ----
+        public ContentResult Message()
+        {
+            return Content("Student registered successfully");
+        }
+
+        // ---- REDIRECT RESULT ----
+        public IActionResult RedirectToDepartment()
+        {
+            return Redirect("/Department/Index");
+        }
+    }
+}

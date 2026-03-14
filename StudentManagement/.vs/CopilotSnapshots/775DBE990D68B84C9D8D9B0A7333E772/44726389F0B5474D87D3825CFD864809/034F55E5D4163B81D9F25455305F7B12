@@ -1,0 +1,18 @@
+﻿@model StudentManagement.Models.Student
+
+<h2>Student Details</h2>
+
+<p><strong>Name:</strong> @Model.Name</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Age:</strong> @Model.Age</p>
+<p><strong>Gender:</strong> @Model.Gender</p>
+<p><strong>Department:</strong> @Model.Department.DepartmentName</p>
+
+@if (Model.Age > 18)
+{
+    <p style="color:green">Eligible student (Age over 18)</p>
+}
+
+<br />
+@Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+@Html.ActionLink("Back to List", "Index")

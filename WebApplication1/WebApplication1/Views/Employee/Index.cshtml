@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model IEnumerable<Employee>
+<h2>@ViewBag.Company</h2>
+<p>@ViewData["Location"]</p>
+
+@if (TempData["Message"] != null)
+{
+    <p>@TempData["Message"]</p>
+}
+
+<table class="table table-dark" border="1">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Department
+        </th>
+    </tr>
+
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Department</td>
+
+        </tr>
+    }
+
+</table>
+<button class="btn btn-success" type="submit">Submit</button>
+<br />
+
+
+@if (TempData["Success"] != null)
+{
+    <p style="color:green">@TempData["Success"] </p>
+}
+
+
+<h2>@ViewData["Message"]</h2>
+<p> Today date is :  @ViewData["Today"] </p>
+
+
+<h2>Employee Name : @ViewBag.Name</h2>
+<p>Department: @ViewBag.Department</p>
+<p>Salary : @ViewBag.Salary</p>

@@ -1,0 +1,55 @@
+﻿@model StudentManagement.Models.Student
+
+<h2>Student Registration</h2>
+
+@using (Html.BeginForm("Create", "Student", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age)
+    </div>
+    <br />
+
+    <div>
+        <label>Gender</label><br />
+        @Html.RadioButtonFor(m => m.Gender, "Male") <span>Male</span>
+        @Html.RadioButtonFor(m => m.Gender, "Female") <span>Female</span>
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.DepartmentId, "Department")
+        @Html.DropDownListFor(m => m.DepartmentId,
+            new SelectList(ViewBag.Departments, "DepartmentId", "DepartmentName"),
+            "-- Select Department --")
+        @Html.ValidationMessageFor(m => m.DepartmentId)
+    </div>
+    <br />
+
+    <input type="submit" value="Register Student" />
+}
+
+<br />
+@Html.ActionLink("← Back to List", "Index")

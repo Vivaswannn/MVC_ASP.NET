@@ -1,0 +1,6 @@
+﻿namespace IdentityDemo.ViewModel
+{
+    public class LoginViewModel
+    {
+    }
+}

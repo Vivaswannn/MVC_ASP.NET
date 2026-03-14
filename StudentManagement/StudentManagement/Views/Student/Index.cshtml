@@ -1,0 +1,51 @@
+﻿@model IEnumerable<StudentManagement.Models.Student>
+
+@{
+    var message = "Student List";
+}
+
+<h2>@ViewBag.Title</h2>
+<h4>@ViewData["Message"]</h4>
+
+<p>@Html.ActionLink("Add New Student", "Create", "Student")</p>
+
+@if (!Model.Any())
+{
+    <p>No students found.</p>
+}
+else
+{
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Age</td>
+                <td>@student.Gender</td>
+                <td>@student.Department.DepartmentName</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = student.StudentId }) |
+                    @Html.ActionLink("Details", "Details", new { id = student.StudentId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = student.StudentId })
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+<hr />
+<h4>Search Student</h4>
+<form asp-controller="Student" asp-action="Search" method="get">
+    <input type="text" name="name" placeholder="Enter student name" />
+    <button type="submit">Search</button>
+</form>

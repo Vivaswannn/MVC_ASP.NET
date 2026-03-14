@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MVCDemo\\Login_Auth\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33CF375A-26E8-4317-974D-FEBB69AAB6F3}|Login_Auth\\Login_Auth.csproj|d:\\mvcdemo\\login_auth\\login_auth\\views\\statemanagement\\savedata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{33CF375A-26E8-4317-974D-FEBB69AAB6F3}|Login_Auth\\Login_Auth.csproj|solutionrelative:login_auth\\views\\statemanagement\\savedata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CF375A-26E8-4317-974D-FEBB69AAB6F3}|Login_Auth\\Login_Auth.csproj|d:\\mvcdemo\\login_auth\\login_auth\\controllers\\statemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CF375A-26E8-4317-974D-FEBB69AAB6F3}|Login_Auth\\Login_Auth.csproj|solutionrelative:login_auth\\controllers\\statemanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33CF375A-26E8-4317-974D-FEBB69AAB6F3}|Login_Auth\\Login_Auth.csproj|d:\\mvcdemo\\login_auth\\login_auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33CF375A-26E8-4317-974D-FEBB69AAB6F3}|Login_Auth\\Login_Auth.csproj|solutionrelative:login_auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Login_Auth\\Login_Auth\\Program.cs",
+              "RelativeDocumentMoniker": "Login_Auth\\Program.cs",
+              "ToolTip": "D:\\MVCDemo\\Login_Auth\\Login_Auth\\Program.cs",
+              "RelativeToolTip": "Login_Auth\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T09:31:25.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SaveData.cshtml",
+              "DocumentMoniker": "D:\\MVCDemo\\Login_Auth\\Login_Auth\\Views\\StateManagement\\SaveData.cshtml",
+              "RelativeDocumentMoniker": "Login_Auth\\Views\\StateManagement\\SaveData.cshtml",
+              "ToolTip": "D:\\MVCDemo\\Login_Auth\\Login_Auth\\Views\\StateManagement\\SaveData.cshtml",
+              "RelativeToolTip": "Login_Auth\\Views\\StateManagement\\SaveData.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-11T09:20:20.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StateManagementController.cs",
+              "DocumentMoniker": "D:\\MVCDemo\\Login_Auth\\Login_Auth\\Controllers\\StateManagementController.cs",
+              "RelativeDocumentMoniker": "Login_Auth\\Controllers\\StateManagementController.cs",
+              "ToolTip": "D:\\MVCDemo\\Login_Auth\\Login_Auth\\Controllers\\StateManagementController.cs",
+              "RelativeToolTip": "Login_Auth\\Controllers\\StateManagementController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAmwEgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T09:07:59.864Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
