@@ -1,0 +1,22 @@
+﻿namespace StudentManagementSystem.ViewModels
+{
+    public class StudentProfileViewModel
+    {
+        public int StudentId { get; set; }
+        public string StudentName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string DepartmentName { get; set; } = string.Empty;
+        public string CourseName { get; set; } = string.Empty;
+        public int CourseDuration { get; set; }
+        public decimal CourseFees { get; set; }
+
+
+        [System.ComponentModel.DataAnnotations.Required]
+        [System.ComponentModel.DataAnnotations.Phone]
+        public string PhoneNumber { get; set; } = string.Empty;
+
+        [System.ComponentModel.DataAnnotations.Required]
+        [System.ComponentModel.DataAnnotations.StringLength(300)]
+        public string Address { get; set; } = string.Empty;
+    }
+}

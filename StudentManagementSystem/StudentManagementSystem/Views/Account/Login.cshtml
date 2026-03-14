@@ -1,0 +1,44 @@
+@model StudentManagementSystem.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-header bg-light">
+                <h4>Login</h4>
+            </div>
+            <div class="card-body">
+
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary w-100">Login</button>
+                }
+
+                <hr />
+                <p class="text-center">
+                    No account? @Html.ActionLink("Register here", "Register", "Account")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

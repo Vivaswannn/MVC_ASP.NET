@@ -1,0 +1,34 @@
+﻿@model StudentManagementSystem.Models.Course
+
+@{
+    ViewData["Title"] = "Delete Course";
+}
+
+<h2>🗑 Delete Course</h2>
+<hr />
+
+<div class="alert alert-danger">
+    ⚠️ Are you sure you want to delete this course?
+</div>
+
+<dl class="row">
+    <dt class="col-sm-3">Course Name</dt>
+    <dd class="col-sm-9">@Model.CourseName</dd>
+
+    <dt class="col-sm-3">Duration</dt>
+    <dd class="col-sm-9">@Model.Duration weeks</dd>
+
+    <dt class="col-sm-3">Fees</dt>
+    <dd class="col-sm-9">Rs. @Model.Fees</dd>
+
+    <dt class="col-sm-3">Department</dt>
+    <dd class="col-sm-9">@Model.Department.DepartmentName</dd>
+</dl>
+
+@using (Html.BeginForm("Delete", "Course", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.CourseId)
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary ms-2" })
+}

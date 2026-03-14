@@ -1,0 +1,30 @@
+﻿@model StudentManagementSystem.Models.Department
+
+@{
+    ViewData["Title"] = "Add Department";
+}
+
+<h2>➕ Add Department</h2>
+<hr />
+
+<div class="col-md-6">
+    @using (Html.BeginForm("Create", "Department", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            @Html.LabelFor(m => m.DepartmentName, new { @class = "form-label" })
+            @Html.TextBoxFor(m => m.DepartmentName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.DepartmentName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Description, new { @class = "form-label" })
+            @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = "3" })
+            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary ms-2" })
+    }
+</div>

@@ -1,0 +1,63 @@
+@model StudentManagementSystem.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-light">
+                <h4>Create Account</h4>
+            </div>
+            <div class="card-body">
+
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.FullName, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.Email, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.Password, new { @class = "form-label" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "form-label" })
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Role</label>
+                        @Html.DropDownListFor(m => m.Role,
+                            new SelectList(new[] { "Student", "Teacher" }),
+                            "-- Select Role --",
+                            new { @class = "form-select" })
+                        @Html.ValidationMessageFor(m => m.Role, "", new { @class = "text-danger" })
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                }
+
+                <hr />
+                <p class="text-center">
+                    Already have an account? @Html.ActionLink("Login here", "Login", "Account")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

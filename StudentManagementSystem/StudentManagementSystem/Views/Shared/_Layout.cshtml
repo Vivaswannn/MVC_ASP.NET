@@ -1,0 +1,92 @@
+@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ViewData["Title"] - Student Management System</title>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+<div class="container-fluid">
+<a class="navbar-brand" asp-controller="Account" asp-action="Login">Student Management System</a>
+
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+<ul class="navbar-nav flex-grow-1">
+
+@if (Context.Session.GetString("UserRole") == "Teacher")
+{
+<li class="nav-item">
+<a class="nav-link" asp-controller="TeacherDashboard" asp-action="Index">Dashboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" asp-controller="Department" asp-action="Index">Departments</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" asp-controller="Course" asp-action="Index">Courses</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" asp-controller="Student" asp-action="Index">Students</a>
+</li>
+}
+else if (Context.Session.GetString("UserRole") == "Student")
+{
+<li class="nav-item">
+<a class="nav-link" asp-controller="StudentDashboard" asp-action="Index">My Dashboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" asp-controller="StudentDashboard" asp-action="UpdateProfile">Edit Profile</a>
+</li>
+}
+
+</ul>
+
+<ul class="navbar-nav">
+@if (Context.Session.GetString("UserRole") != null)
+{
+<li class="nav-item">
+<span class="nav-link">
+@Context.Session.GetString("UserName")
+</span>
+</li>
+<li class="nav-item">
+<a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
+</li>
+}
+else
+{
+<li class="nav-item">
+<a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+</li>
+}
+</ul>
+
+</div>
+</div>
+</nav>
+</header>
+
+<div class="container">
+<main role="main">
+@RenderBody()
+</main>
+</div>
+
+<footer class="mt-4">
+<div class="container">
+&copy; 2026 - Student Management System
+</div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

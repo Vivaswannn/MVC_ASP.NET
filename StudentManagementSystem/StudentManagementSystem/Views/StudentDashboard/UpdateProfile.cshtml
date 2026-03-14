@@ -1,0 +1,54 @@
+﻿@model StudentManagementSystem.ViewModels.StudentProfileViewModel
+
+@{
+    ViewData["Title"] = "Update Profile";
+}
+
+<h2>✏️ Update Profile</h2>
+<hr />
+
+<div class="col-md-6">
+    @using (Html.BeginForm("UpdateProfile", "StudentDashboard", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.StudentId)
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" value="@Model.StudentName" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" value="@Model.Email" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Department</label>
+            <input type="text" class="form-control" value="@Model.DepartmentName" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Course</label>
+            <input type="text" class="form-control" value="@Model.CourseName" disabled />
+        </div>
+
+        <hr />
+        <p class="text-muted">✏️ You can only edit Phone Number and Address</p>
+
+        <div class="mb-3">
+            @Html.LabelFor(m => m.PhoneNumber, new { @class = "form-label" })
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Address, new { @class = "form-label" })
+            @Html.TextAreaFor(m => m.Address, new { @class = "form-control", rows = "3" })
+            @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary ms-2" })
+    }
+</div>
