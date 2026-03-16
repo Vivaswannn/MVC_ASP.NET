@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using StudentManagementSystem.Data;
 using StudentManagementSystem.Models;
 using StudentManagementSystem.ViewModels;
@@ -16,6 +16,8 @@ namespace StudentManagementSystem.Controllers
 
         public IActionResult Register()
         {
+            ViewBag.Departments = _context.Departments.ToList();
+            ViewBag.Courses = _context.Courses.ToList();
             return View();
         }
 
@@ -30,7 +32,36 @@ namespace StudentManagementSystem.Controllers
                 if (existingUser != null)
                 {
                     ModelState.AddModelError("Email", "This email is already registered");
+                    ViewBag.Departments = _context.Departments.ToList();
+                    ViewBag.Courses = _context.Courses.ToList();
                     return View(model);
+                }
+
+                if (model.Role == "Student")
+                {
+                    if (string.IsNullOrWhiteSpace(model.PhoneNumber))
+                    {
+                        ModelState.AddModelError("PhoneNumber", "Phone Number is required for students");
+                    }
+                    if (string.IsNullOrWhiteSpace(model.Address))
+                    {
+                        ModelState.AddModelError("Address", "Address is required for students");
+                    }
+                    if (!model.DepartmentId.HasValue || model.DepartmentId.Value == 0)
+                    {
+                        ModelState.AddModelError("DepartmentId", "Please select a department");
+                    }
+                    if (!model.CourseId.HasValue || model.CourseId.Value == 0)
+                    {
+                        ModelState.AddModelError("CourseId", "Please select a course");
+                    }
+
+                    if (!ModelState.IsValid)
+                    {
+                        ViewBag.Departments = _context.Departments.ToList();
+                        ViewBag.Courses = _context.Courses.ToList();
+                        return View(model);
+                    }
                 }
 
                 var user = new User
@@ -42,11 +73,29 @@ namespace StudentManagementSystem.Controllers
                 };
 
                 _context.Users.Add(user);
+
+                if (model.Role == "Student")
+                {
+                    var student = new Student
+                    {
+                        StudentName = model.FullName,
+                        Email = model.Email,
+                        PhoneNumber = model.PhoneNumber,
+                        Address = model.Address,
+                        DepartmentId = model.DepartmentId!.Value,
+                        CourseId = model.CourseId!.Value
+                    };
+
+                    _context.Students.Add(student);
+                }
+
                 _context.SaveChanges();
 
                 return RedirectToAction("Login");
             }
 
+            ViewBag.Departments = _context.Departments.ToList();
+            ViewBag.Courses = _context.Courses.ToList();
             return View(model);
         }
 

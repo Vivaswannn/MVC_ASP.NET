@@ -1,59 +1,66 @@
-﻿@model StudentManagementSystem.ViewModels.StudentProfileViewModel
+@model StudentManagementSystem.ViewModels.StudentProfileViewModel
 
 @{
     ViewData["Title"] = "Student Dashboard";
 }
 
-<h2>🎓 Welcome, @Model.StudentName!</h2>
-<hr />
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h3 class="fw-bold mb-0">🎓 Welcome back, @Model.StudentName!</h3>
+    <a asp-action="UpdateProfile" class="btn btn-primary btn-sm rounded-pill px-4 shadow-sm fw-medium">✏️ Edit Profile</a>
+</div>
 
-<div class="row">
+<div class="row g-4">
 
     <div class="col-md-6">
-        <div class="card shadow mb-4">
-            <div class="card-header bg-primary text-white">
-                <h5>👤 My Profile</h5>
+        <div class="glass-card h-100">
+            <div class="glass-header d-flex align-items-center gap-3">
+                <span class="text-primary bg-primary bg-opacity-10 p-2 rounded-circle shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                My Profile Details
             </div>
-            <div class="card-body">
-                <dl class="row">
-                    <dt class="col-sm-4">Name</dt>
-                    <dd class="col-sm-8">@Model.StudentName</dd>
+            <div class="glass-body">
+                <dl class="row mb-0">
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-3">Full Name</dt>
+                    <dd class="col-sm-8 fw-bold text-dark mb-3">@Model.StudentName</dd>
 
-                    <dt class="col-sm-4">Email</dt>
-                    <dd class="col-sm-8">@Model.Email</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-3">Email</dt>
+                    <dd class="col-sm-8 mb-3">@Model.Email</dd>
 
-                    <dt class="col-sm-4">Phone</dt>
-                    <dd class="col-sm-8">@Model.PhoneNumber</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-3">Phone</dt>
+                    <dd class="col-sm-8 mb-3">@Model.PhoneNumber</dd>
 
-                    <dt class="col-sm-4">Address</dt>
-                    <dd class="col-sm-8">@Model.Address</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-3">Address</dt>
+                    <dd class="col-sm-8 mb-3">@Model.Address</dd>
 
-                    <dt class="col-sm-4">Department</dt>
-                    <dd class="col-sm-8">@Model.DepartmentName</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-0">Department</dt>
+                    <dd class="col-sm-8 mb-0"><span class="badge bg-light text-dark border px-2 py-1">@Model.DepartmentName</span></dd>
                 </dl>
-                <a asp-action="UpdateProfile" class="btn btn-warning btn-sm mt-2">✏️ Edit Profile</a>
             </div>
         </div>
     </div>
 
     <div class="col-md-6">
-        <div class="card shadow mb-4">
-            <div class="card-header bg-success text-white">
-                <h5>📚 My Course Details</h5>
+        <div class="glass-card h-100">
+            <div class="glass-header d-flex align-items-center gap-3">
+                <span class="text-success bg-success bg-opacity-10 p-2 rounded-circle shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                </span>
+                My Course Info
             </div>
-            <div class="card-body">
-                <dl class="row">
-                    <dt class="col-sm-4">Course</dt>
-                    <dd class="col-sm-8">@Model.CourseName</dd>
+            <div class="glass-body">
+                <dl class="row mb-0">
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-4">Enrolled Course</dt>
+                    <dd class="col-sm-8 fw-bold text-primary fs-5 mb-4">@Model.CourseName</dd>
 
-                    <dt class="col-sm-4">Duration</dt>
-                    <dd class="col-sm-8">@Model.CourseDuration weeks</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-4">Duration</dt>
+                    <dd class="col-sm-8 mb-4">@Model.CourseDuration Weeks</dd>
 
-                    <dt class="col-sm-4">Fees</dt>
-                    <dd class="col-sm-8">Rs. @Model.CourseFees</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-4">Course Fees</dt>
+                    <dd class="col-sm-8 font-monospace mb-4">Rs. @Model.CourseFees</dd>
 
-                    <dt class="col-sm-4">Department</dt>
-                    <dd class="col-sm-8">@Model.DepartmentName</dd>
+                    <dt class="col-sm-4 text-muted fw-bold small text-uppercase mb-0">Department</dt>
+                    <dd class="col-sm-8 mb-0"><span class="badge bg-light text-dark border px-2 py-1">@Model.DepartmentName</span></dd>
                 </dl>
             </div>
         </div>

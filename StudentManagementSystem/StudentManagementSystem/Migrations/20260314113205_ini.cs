@@ -2,10 +2,12 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace StudentManagementSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class ini : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -93,9 +95,27 @@ namespace StudentManagementSystem.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "DepartmentId", "DepartmentName", "Description" },
+                values: new object[,]
+                {
+                    { 1, "Computer Science", "Computer Science Department" },
+                    { 2, "Mathematics", "Mathematics Department" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "Email", "FullName", "Password", "Role" },
                 values: new object[] { 1, "ravi@gmail.com", "Ravi Kothakonda", "123456", "Teacher" });
+
+            migrationBuilder.InsertData(
+                table: "Courses",
+                columns: new[] { "CourseId", "CourseName", "DepartmentId", "Duration", "Fees" },
+                values: new object[,]
+                {
+                    { 1, "BSc Computer Science", 1, 36, 50000m },
+                    { 2, "BSc Mathematics", 2, 36, 45000m }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Courses_DepartmentId",

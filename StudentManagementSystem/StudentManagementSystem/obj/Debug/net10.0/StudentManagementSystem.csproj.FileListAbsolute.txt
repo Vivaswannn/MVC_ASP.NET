@@ -148,7 +148,6 @@ D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\rjs
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\scopedcss\bundle\StudentManagementSystem.styles.css
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\scopedcss\projectbundle\StudentManagementSystem.bundle.scp.css
-D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\compressed\6tjizv99g7-{0}-b9sayid5wm-b9sayid5wm.gz
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\compressed\dfxarta68e-{0}-61n19gt1b8-61n19gt1b8.gz
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\compressed\2ks43q5myy-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\compressed\02tmapkftl-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -217,10 +216,10 @@ D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\sta
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\staticwebassets.development.json
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\swae.build.ex.cache
-D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\StudentM.D74F523C.Up2Date
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\StudentManagementSystem.dll
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\refint\StudentManagementSystem.dll
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\StudentManagementSystem.pdb
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\StudentManagementSystem.genruntimeconfig.cache
 D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\ref\StudentManagementSystem.dll
+D:\MVCDemo\StudentManagementSystem\StudentManagementSystem\obj\Debug\net10.0\compressed\6tjizv99g7-{0}-pu4nxgy8k8-pu4nxgy8k8.gz

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentManagementSystem.ViewModels
 {
@@ -24,5 +24,13 @@ namespace StudentManagementSystem.ViewModels
 
         [Required(ErrorMessage = "Please select a role")]
         public string Role { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Address { get; set; }
+
+        public int? DepartmentId { get; set; }
+
+        public int? CourseId { get; set; }
     }
 }

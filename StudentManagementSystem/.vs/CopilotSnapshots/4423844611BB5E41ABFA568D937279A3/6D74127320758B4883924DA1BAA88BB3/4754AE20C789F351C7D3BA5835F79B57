@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using StudentManagementSystem.Models;
 
 namespace StudentManagementSystem.Data
@@ -22,11 +22,6 @@ namespace StudentManagementSystem.Data
                 .WithMany(d => d.Courses)
                 .HasForeignKey(c => c.DepartmentId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            // Ensure decimal precision for Fees to avoid silent truncation warnings
-            modelBuilder.Entity<Course>()
-                .Property(c => c.Fees)
-                .HasPrecision(18, 2);
 
 
             modelBuilder.Entity<Student>()

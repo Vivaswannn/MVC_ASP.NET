@@ -11,8 +11,8 @@ using StudentManagementSystem.Data;
 namespace StudentManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260314093822_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260314115028_SeedData2")]
+    partial class SeedData2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,7 @@ namespace StudentManagementSystem.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Fees")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("CourseId");
@@ -51,6 +52,24 @@ namespace StudentManagementSystem.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            CourseId = 1,
+                            CourseName = "BSc Computer Science",
+                            DepartmentId = 1,
+                            Duration = 36,
+                            Fees = 50000m
+                        },
+                        new
+                        {
+                            CourseId = 2,
+                            CourseName = "BSc Mathematics",
+                            DepartmentId = 2,
+                            Duration = 36,
+                            Fees = 45000m
+                        });
                 });
 
             modelBuilder.Entity("StudentManagementSystem.Models.Department", b =>
@@ -74,6 +93,20 @@ namespace StudentManagementSystem.Migrations
                     b.HasKey("DepartmentId");
 
                     b.ToTable("Departments");
+
+                    b.HasData(
+                        new
+                        {
+                            DepartmentId = 1,
+                            DepartmentName = "Computer Science",
+                            Description = "Computer Science Department"
+                        },
+                        new
+                        {
+                            DepartmentId = 2,
+                            DepartmentName = "Mathematics",
+                            Description = "Mathematics Department"
+                        });
                 });
 
             modelBuilder.Entity("StudentManagementSystem.Models.Student", b =>
